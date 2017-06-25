@@ -1,0 +1,67 @@
+---
+- name: This playbook will install nginx web server 
+  hosts: all
+  become: yes 
+
+  vars:
+    - greeting_msg: Hello Ansible
+    - automation_tool: Ansible
+    - provisioner_tool: Docker
+
+  vars_files:
+    - my_variables
+    - your_variables
+    - my_proxy:
+          http_proxy: 1.2.3.4:9000
+
+  tasks:
+   - name: Install nginx web server
+     apt: name=nginx state=latest update_cache=yes
+
+   - name: Configure nginx web server
+     copy: src=log dest=/etc/nginx/ backup=yes
+
+   - name: Restart the nginx service 
+     service: name=nginx state=restarted
+
+   - name: Deploy web site content into nginx web server
+     template: src=index.html.j2 dest=/usr/share/nginx/html/index.html
+
+   - name: Print the values of our custom varibales from the files
+     debug: msg="Value of a is {{ a }} and value of b is {{ b }}"
+
+   - debug: 
+        msg:
+           - "Value of x is {{ x }} and value of y is {{ y }}"
+           - "Proxy URL is {{ item.value }}"
+     with_dict: "{{ my_proxy }}"
+
+
+   - debug: msg="Mobile number of {{item.value.name}} is {{item.value.mobile}}."
+     with_dict: "{{contacts}}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

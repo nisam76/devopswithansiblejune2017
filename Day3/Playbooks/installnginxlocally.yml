@@ -1,0 +1,11 @@
+---
+- name: This playbook will install nginx web server 
+  hosts: localhost 
+  become: yes 
+
+  tasks:
+   - name: Install nginx web server
+     apt: name=nginx state=latest update_cache=yes install_recommends=yes
+
+   - name: Restart the nginx service 
+     service: name=nginx state=restarted

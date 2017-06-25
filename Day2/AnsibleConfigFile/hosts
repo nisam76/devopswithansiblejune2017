@@ -1,0 +1,6 @@
+[dev]
+172.17.0.3 ansible_ssh_port=3000 ansible_ssh_host=localhost ansible_become_password=tektutor  
+
+[qa]
+172.17.0.3 ansible_ssh_port=3000 ansible_ssh_host=localhost ansible_become_password=tektutor   
+172.17.0.4 ansible_ssh_port=4000 ansible_ssh_host=localhost ansible_become_password=tektutor   

@@ -1,0 +1,5 @@
+---
+- name: Configure nginx 
+  copy: src=nginx.conf  dest=/etc/nginx/nginx.conf
+  notify:
+     - Restart nginx

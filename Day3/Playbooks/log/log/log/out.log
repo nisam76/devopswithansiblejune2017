@@ -1,0 +1,522 @@
+Using /etc/ansible/ansible.cfg as config file
+
+
+
+
+
+
+
+
+Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/dist-packages/ansible/plugins/callback/__init__.pyc
+
+PLAYBOOK: install.yml **********************************************************
+4 plays in install.yml
+
+PLAY [This playbook will demonstrate the use of apt module] ********************
+
+TASK [setup] *******************************************************************
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> ESTABLISH SSH CONNECTION FOR USER: tektutor
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1498287853.0-165590401860149 `" && echo ansible-tmp-1498287853.0-165590401860149="` echo ~/.ansible/tmp/ansible-tmp-1498287853.0-165590401860149 `" ) && sleep 0'"'"''
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1498287853.0-129585707342842 `" && echo ansible-tmp-1498287853.0-129585707342842="` echo ~/.ansible/tmp/ansible-tmp-1498287853.0-129585707342842 `" ) && sleep 0'"'"''
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1498287853.0-160981571930659 `" && echo ansible-tmp-1498287853.0-160981571930659="` echo ~/.ansible/tmp/ansible-tmp-1498287853.0-160981571930659 `" ) && sleep 0'"'"''
+<localhost> PUT /tmp/tmpbFs8Bw TO /home/tektutor/.ansible/tmp/ansible-tmp-1498287853.0-129585707342842/setup.py
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set sftp_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r '[localhost]'
+<localhost> PUT /tmp/tmp7NQX13 TO /root/.ansible/tmp/ansible-tmp-1498287853.0-160981571930659/setup.py
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set sftp_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r '[localhost]'
+<localhost> PUT /tmp/tmpPpgjrW TO /root/.ansible/tmp/ansible-tmp-1498287853.0-165590401860149/setup.py
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set sftp_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r '[localhost]'
+<localhost> ESTABLISH SSH CONNECTION FOR USER: tektutor
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'chmod u+x /home/tektutor/.ansible/tmp/ansible-tmp-1498287853.0-129585707342842/ /home/tektutor/.ansible/tmp/ansible-tmp-1498287853.0-129585707342842/setup.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1498287853.0-160981571930659/ /root/.ansible/tmp/ansible-tmp-1498287853.0-160981571930659/setup.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1498287853.0-165590401860149/ /root/.ansible/tmp/ansible-tmp-1498287853.0-165590401860149/setup.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r -tt localhost '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1498287853.0-160981571930659/setup.py && sleep 0'"'"''
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r -tt localhost '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1498287853.0-165590401860149/setup.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: tektutor
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r -tt localhost '/bin/sh -c '"'"'sudo -H -S  -p "[sudo via ansible, key=mhyrlxcnyjlvtzhcwjkdfmjozkfozpkw] password: " -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-mhyrlxcnyjlvtzhcwjkdfmjozkfozpkw; /usr/bin/python /home/tektutor/.ansible/tmp/ansible-tmp-1498287853.0-129585707342842/setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+ok: [server3]
+ok: [server1]
+ok: [server2]
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> ESTABLISH SSH CONNECTION FOR USER: tektutor
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1498287857.06-70171126308969 `" && echo ansible-tmp-1498287857.06-70171126308969="` echo ~/.ansible/tmp/ansible-tmp-1498287857.06-70171126308969 `" ) && sleep 0'"'"''
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1498287857.06-103669988285510 `" && echo ansible-tmp-1498287857.06-103669988285510="` echo ~/.ansible/tmp/ansible-tmp-1498287857.06-103669988285510 `" ) && sleep 0'"'"''
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1498287857.06-138034094097728 `" && echo ansible-tmp-1498287857.06-138034094097728="` echo ~/.ansible/tmp/ansible-tmp-1498287857.06-138034094097728 `" ) && sleep 0'"'"''
+<localhost> PUT /tmp/tmpcuJY6G TO /home/tektutor/.ansible/tmp/ansible-tmp-1498287857.06-103669988285510/setup.py
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set sftp_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r '[localhost]'
+<localhost> PUT /tmp/tmp0bx6DU TO /root/.ansible/tmp/ansible-tmp-1498287857.06-70171126308969/setup.py
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set sftp_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r '[localhost]'
+<localhost> PUT /tmp/tmpW8RkAs TO /root/.ansible/tmp/ansible-tmp-1498287857.06-138034094097728/setup.py
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set sftp_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r '[localhost]'
+<localhost> ESTABLISH SSH CONNECTION FOR USER: tektutor
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'chmod u+x /home/tektutor/.ansible/tmp/ansible-tmp-1498287857.06-103669988285510/ /home/tektutor/.ansible/tmp/ansible-tmp-1498287857.06-103669988285510/setup.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: tektutor
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r -tt localhost '/bin/sh -c '"'"'sudo -H -S  -p "[sudo via ansible, key=dsljmbhbmzexmmoggfrngccwlvzjnyky] password: " -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-dsljmbhbmzexmmoggfrngccwlvzjnyky; /usr/bin/python /home/tektutor/.ansible/tmp/ansible-tmp-1498287857.06-103669988285510/setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1498287857.06-138034094097728/ /root/.ansible/tmp/ansible-tmp-1498287857.06-138034094097728/setup.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1498287857.06-70171126308969/ /root/.ansible/tmp/ansible-tmp-1498287857.06-70171126308969/setup.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r -tt localhost '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1498287857.06-70171126308969/setup.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r -tt localhost '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1498287857.06-138034094097728/setup.py && sleep 0'"'"''
+ok: [server3]
+ok: [server2]
+ok: [server1]
+
+TASK [Install tree utility] ****************************************************
+task path: /home/jegan/Trainings/Orange/Day3/Playbooks/install.yml:11
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/packaging/os/apt.py
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/packaging/os/apt.py
+<localhost> ESTABLISH SSH CONNECTION FOR USER: tektutor
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/packaging/os/apt.py
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1498287858.24-49188629959298 `" && echo ansible-tmp-1498287858.24-49188629959298="` echo ~/.ansible/tmp/ansible-tmp-1498287858.24-49188629959298 `" ) && sleep 0'"'"''
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1498287858.24-153960155167567 `" && echo ansible-tmp-1498287858.24-153960155167567="` echo ~/.ansible/tmp/ansible-tmp-1498287858.24-153960155167567 `" ) && sleep 0'"'"''
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1498287858.24-10972124798530 `" && echo ansible-tmp-1498287858.24-10972124798530="` echo ~/.ansible/tmp/ansible-tmp-1498287858.24-10972124798530 `" ) && sleep 0'"'"''
+<localhost> PUT /tmp/tmpI8J1Af TO /root/.ansible/tmp/ansible-tmp-1498287858.24-153960155167567/apt.py
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set sftp_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> PUT /tmp/tmpw3Jk_s TO /home/tektutor/.ansible/tmp/ansible-tmp-1498287858.24-49188629959298/apt.py
+<localhost> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r '[localhost]'
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set sftp_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r '[localhost]'
+<localhost> PUT /tmp/tmp4M1bEy TO /root/.ansible/tmp/ansible-tmp-1498287858.24-10972124798530/apt.py
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set sftp_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC sftp -b - -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r '[localhost]'
+<localhost> ESTABLISH SSH CONNECTION FOR USER: tektutor
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'chmod u+x /home/tektutor/.ansible/tmp/ansible-tmp-1498287858.24-49188629959298/ /home/tektutor/.ansible/tmp/ansible-tmp-1498287858.24-49188629959298/apt.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1498287858.24-153960155167567/ /root/.ansible/tmp/ansible-tmp-1498287858.24-153960155167567/apt.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r localhost '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1498287858.24-10972124798530/ /root/.ansible/tmp/ansible-tmp-1498287858.24-10972124798530/apt.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: tektutor
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=4000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=tektutor)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=4000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=tektutor -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r -tt localhost '/bin/sh -c '"'"'sudo -H -S  -p "[sudo via ansible, key=mijnfcdlbmisahjdifjalsidcvwclzbn] password: " -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-mijnfcdlbmisahjdifjalsidcvwclzbn; /usr/bin/python /home/tektutor/.ansible/tmp/ansible-tmp-1498287858.24-49188629959298/apt.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=3000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=3000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r -tt localhost '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1498287858.24-153960155167567/apt.py && sleep 0'"'"''
+<localhost> ESTABLISH SSH CONNECTION FOR USER: root
+<localhost> SSH: ansible.cfg set ssh_args: (-C)(-o)(ControlMaster=auto)(-o)(ControlPersist=60s)
+<localhost> SSH: ANSIBLE_REMOTE_PORT/remote_port/ansible_port set: (-o)(Port=2000)
+<localhost> SSH: ANSIBLE_PRIVATE_KEY_FILE/private_key_file/ansible_ssh_private_key_file set: (-o)(IdentityFile="/home/jegan/.ssh/id_rsa")
+<localhost> SSH: ansible_password/ansible_ssh_pass not set: (-o)(KbdInteractiveAuthentication=no)(-o)(PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey)(-o)(PasswordAuthentication=no)
+<localhost> SSH: ANSIBLE_REMOTE_USER/remote_user/ansible_user/user/-u set: (-o)(User=root)
+<localhost> SSH: ANSIBLE_TIMEOUT/timeout set: (-o)(ConnectTimeout=10)
+<localhost> SSH: PlayContext set ssh_common_args: ()
+<localhost> SSH: PlayContext set ssh_extra_args: ()
+<localhost> SSH: found only ControlPersist; added ControlPath: (-o)(ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r)
+<localhost> SSH: EXEC ssh -vvv -C -o ControlMaster=auto -o ControlPersist=60s -o Port=2000 -o 'IdentityFile="/home/jegan/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/home/jegan/.ansible/cp/ansible-ssh-%h-%p-%r -tt localhost '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1498287858.24-10972124798530/apt.py && sleep 0'"'"''
+ok: [server1] => {
+    "cache_update_time": 1498287665, 
+    "cache_updated": true, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_unauthenticated": false, 
+            "autoremove": false, 
+            "cache_valid_time": 0, 
+            "deb": null, 
+            "default_release": null, 
+            "dpkg_options": "force-confdef,force-confold", 
+            "force": false, 
+            "install_recommends": null, 
+            "name": "tree", 
+            "only_upgrade": false, 
+            "package": [
+                "tree"
+            ], 
+            "purge": false, 
+            "state": "latest", 
+            "update_cache": true, 
+            "upgrade": null
+        }, 
+        "module_name": "apt"
+    }
+}
+ok: [server2] => {
+    "cache_update_time": 1498287666, 
+    "cache_updated": true, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_unauthenticated": false, 
+            "autoremove": false, 
+            "cache_valid_time": 0, 
+            "deb": null, 
+            "default_release": null, 
+            "dpkg_options": "force-confdef,force-confold", 
+            "force": false, 
+            "install_recommends": null, 
+            "name": "tree", 
+            "only_upgrade": false, 
+            "package": [
+                "tree"
+            ], 
+            "purge": false, 
+            "state": "latest", 
+            "update_cache": true, 
+            "upgrade": null
+        }, 
+        "module_name": "apt"
+    }
+}
+ok: [server3] => {
+    "cache_update_time": 1498287867, 
+    "cache_updated": true, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_unauthenticated": false, 
+            "autoremove": false, 
+            "cache_valid_time": 0, 
+            "deb": null, 
+            "default_release": null, 
+            "dpkg_options": "force-confdef,force-confold", 
+            "force": false, 
+            "install_recommends": null, 
+            "name": "tree", 
+            "only_upgrade": false, 
+            "package": [
+                "tree"
+            ], 
+            "purge": false, 
+            "state": "latest", 
+            "update_cache": true, 
+            "upgrade": null
+        }, 
+        "module_name": "apt"
+    }
+}
+
+PLAY RECAP *********************************************************************
+server1                    : ok=3    changed=0    unreachable=0    failed=0   
+server2                    : ok=3    changed=0    unreachable=0    failed=0   
+server3                    : ok=3    changed=0    unreachable=0    failed=0   
+

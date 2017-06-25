@@ -1,0 +1,3 @@
+---
+- name: This is a post-task
+  debug: msg="Post task executed"

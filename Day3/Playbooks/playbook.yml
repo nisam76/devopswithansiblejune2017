@@ -1,0 +1,8 @@
+---
+
+- name: This playbook will demonstrate the usage of ansible ping module
+  hosts: all
+
+  tasks:
+   - name: ping the machine
+     ping:

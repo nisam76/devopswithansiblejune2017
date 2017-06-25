@@ -1,0 +1,85 @@
+---
+- name: This playbook demonstrates conditional installations
+  hosts: all
+  become: yes
+
+  vars:
+    packages:
+      - tree
+      - cscope
+      - vim
+
+  vars_files:
+    - ubuntu_variables
+    - centos_variables
+
+
+  post_tasks:
+    - include: posttask.yml
+
+  pre_tasks:
+     - include: pretask.yml
+
+  tasks:
+    - name: Install all the software utilities on Ubuntu
+      apt: name={{ item }} state=present update_cache=yes
+      with_items: "{{ packages }}"
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+
+    - name: Install nginx on Ubuntu box
+      apt: name=nginx state=present update_cache=yes
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+
+    - name: Install epel release package on Centos box
+      yum: name=epel-release state=present
+      when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
+
+    - name: Install nginx on Centos box
+      yum: name=nginx state=present
+      when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
+
+    - name: Configure nginx web server on Ubuntu box
+      copy: src=nginx_ubuntu.conf dest=/etc/nginx/nginx.conf
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+      notify:
+         - Restart the nginx web server
+
+    - name: Configure nginx web server on Centos box
+      copy: src=nginx_centos.conf dest=/etc/nginx/nginx.conf
+      when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
+      notify:
+         - Dummy handler 
+
+    - name: Configure nginx web server on Ubuntu box
+      copy: src=nginx_ubuntu.conf dest=/etc/nginx/nginx.conf
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+      notify:
+         - Restart the nginx web server
+
+    - name: Deploy web site on Ubuntu box
+      template: src=index_ubuntu.html.j2 dest=/usr/share/nginx/html/index.html
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+      notify:
+         - Restart the nginx web server
+
+    - name: Deploy web site on Centos box
+      template: src=index_centos.html.j2 dest=/usr/share/nginx/html/index.html
+      when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
+      notify:
+         - Restart the nginx web server
+
+    - name: Create a log directory on Ubuntu
+      file: path=/home/tektutor/log mode=700 state=directory
+      when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+
+    - name: Create a log directory on CentOS 
+      file: path=/root/log mode=700 state=directory
+      when: ( ansible_distribution == "CentOS" and ansible_os_family == "RedHat" )
+
+
+  handlers:
+    - name: Restart the nginx web server - need not match with notifier string
+      service: name=nginx state=restarted
+      listen: 
+         - Restart the nginx web server
+         - Dummy handler

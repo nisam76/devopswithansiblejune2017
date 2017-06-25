@@ -1,0 +1,10 @@
+a: 1000
+b: 2000
+
+contacts:
+   Jegan:
+     name: Jeganathan Swaminathan
+     mobile: 123-456-789
+   Sriram:
+     name: Sriram Jeganathan
+     mobile: 123-456-789

@@ -1,0 +1,8 @@
+FROM ubuntu:17.04
+MAINTAINER Jeganathan Swaminathan <jegan@devopslabs.org>
+
+RUN apt-get update 
+RUN apt-get install tree 
+
+#Choose your OS start-up applications 
+CMD [ "/bin/bash" ]

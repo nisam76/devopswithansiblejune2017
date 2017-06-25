@@ -1,0 +1,4 @@
+---
+# defaults file for nginx
+automation_tool: Ansible
+provisioner_tool: Docker

@@ -1,0 +1,3 @@
+---
+- name: This is a pre-task
+  debug: msg="Pre task executed"

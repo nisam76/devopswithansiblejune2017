@@ -1,0 +1,24 @@
+---
+
+- name: This playbook will demonstrate the use of apt module
+  hosts: all
+  become: yes 
+  serial: 10
+
+- hosts: all
+  become: yes 
+  tasks: 
+   - name: Install tree utility
+     apt: name=tree state=latest update_cache=yes
+
+- hosts: prod 
+  become: yes 
+  tasks: 
+   - name: Install cscope utility
+     apt: name=cscope state=latest update_cache=yes
+
+- hosts: qa 
+  become: yes 
+  tasks: 
+   - name: Install curl utility
+     apt: name=curl state=latest update_cache=yes

@@ -1,0 +1,26 @@
+---
+
+- name: Demonstrates dictionary
+  hosts: all
+
+  vars:
+    my_proxy:
+        proxy1: 1.2.3.4:8000
+        proxy2: 3.2.3.4:9000
+
+    greet:
+        word1: hello 
+        word2: world 
+
+  tasks:
+
+    - name: Print all the values in the dictionary
+      debug:
+        msg: 
+          - "Key is {{ item.key }}"
+          - "Value is {{ item.value }}"
+
+      with_dict: "{{ my_proxy }}"
+
+    - debug: msg="Key is {{ item.key }} and value is {{ item.value }}"
+      with_dict: "{{ greet }}"

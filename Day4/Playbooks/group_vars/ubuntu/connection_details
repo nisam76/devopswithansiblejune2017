@@ -1,0 +1,3 @@
+ansible_user: tektutor 
+ansible_password: root
+ansible_become_password: tektutor 
